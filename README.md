@@ -45,8 +45,7 @@ Cliquez sur le bouton `C` pour réinitialiser la calculatrice.
 
 ## Tests
 ### Exécution des tests
-*Commandes à venir!!*
--  *`pytest`*
+-  `pytest`
   
 ## Flux de contribution
 
