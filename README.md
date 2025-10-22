@@ -44,9 +44,22 @@ Cliquez sur le bouton `=` pour soumettre l'expression et afficher le résultat.
 Cliquez sur le bouton `C` pour réinitialiser la calculatrice.
 
 ## Tests
+### Contenu
+- `test_operators.py` : tests unitaires pour les fonctions `add`, `subtract`, `multiply` et `divide`.
+
 ### Exécution des tests
--  `pytest`
-  
+1. Ouvrir un terminal dans le dossier racine (`TP3---LOG3000-main/TP3---LOG3000-main`)  
+2. Lancer pytest :
+
+```bash
+pytest
+  ```
+
+### Couverture
+- Test des opérations avec nombres positifs et négatifs
+- Test avec zéro
+- Test avec nombres décimaux
+- Test des exceptions (division par zéro)
 ## Flux de contribution
 
 ### Workflow des branches
