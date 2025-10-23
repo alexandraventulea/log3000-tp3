@@ -1,5 +1,5 @@
-# Calculatrice Flask
-## Description du projet
+# Calculatrice Flask (LOG300-TP3-ÉQUIPE14)
+## Description et objectif du projet 
 Ce projet vise à fournir une calculatrice web accessible permettant aux utilisateurs d'effectuer des calculs arithmétiques de base directement depuis leur navigateur, sans nécessiter l'installation de logiciels supplémentaires. L'application est construite avec Flask pour assurer une architecture modulaire et maintenable.
 
 Nous y trouvons:
@@ -8,7 +8,7 @@ Nous y trouvons:
 - Système de validation des expressions et gestion des erreurs
 
 ## Installation
-### Avant de commencer assurer vous d'avoir:
+### Prérequis
 - Python 3.7 ou supérieur
 - Pycharm ou un autre environnement qui soutient python
 ### Installation sur pycharm
