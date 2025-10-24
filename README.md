@@ -10,7 +10,7 @@ Nous y trouvons:
 ## Installation
 ### Prérequis
 - Système d’exploitation : Linux/macOS/Windows
-- Python 3.12 ou supérieur
+- Python 3.7 ou supérieur
 - Pycharm ou un autre environnement qui soutient python
 ### Installation sur pycharm
 1. Cloner le dépot sur votre machine locale
