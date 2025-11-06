@@ -64,8 +64,7 @@ pytest
 ## Flux de contribution
 
 ### Workflow des branches
-- **master** : code stable et testé. Les commits directs sont interdits.  
-- **dev** : intégration continue des fonctionnalités.  
+- **main** : intégration continue des fonctionnalités.  
 - **feature/<nom-fonctionnalité>** : nouvelles fonctionnalités.  
 - **bugfix/<nom-bug>** : correction de bugs.  
 - **hotfix/<nom-correction>** : corrections urgentes en production.  
