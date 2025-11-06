@@ -1,8 +1,7 @@
 """
 Implémentation des opérations arithmétiques de base utilisées par la calculatrice.
 
-Ce module isole les opérations (+, -, *, /) pour faciliter les tests unitaires
-et la correction de bogues sans toucher au reste de l'application.
+Ce module isole les opérations (+, -, *, /) pour faciliter les tests unitaires et la correction de bogues sans toucher au reste de l'application.
 """
 
 def add(a,b):
@@ -57,4 +56,4 @@ def divide(a,b):
     Exceptions levées:
         ZeroDivisionError: Si b vaut zéro.
     """
-    return a // b
+    return a / b
