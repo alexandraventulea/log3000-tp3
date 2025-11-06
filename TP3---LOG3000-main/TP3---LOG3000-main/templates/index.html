@@ -2,6 +2,15 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<!--
+   Template HMTL de la calculatrice.
+
+   Rôle :
+   - Afficher l'interface utilisateur (afficheur + boutons).
+   - Envoyer l'expression au serveur par un POST vers la route '/'.
+
+   Le calcul lui-même est fait côté serveur (voir app.py) pour garder la logique côté serveur.
+-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Flask Calculator</title>
 <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
@@ -9,8 +18,17 @@
 <body>
 <div class="calculator">
    <h1>Flask Calculator</h1>
+    <!--
+      Le formulaire envoie le contenu du champ "display" en POST vers la route '/'.
+      On ne permet pas la saisie directe au clavier (readonly) pour garder les expressions simples.
+    -->
    <form method="POST">
       <input type="text" name="display" id="display" value="{{ result }}" readonly>
+      <!--
+         Grille de boutons :
+         - Les chiffres et opérateurs sont ajoutés au champ "display" côté client.
+         - Le bouton "=" soumet le formulaire (l'expression est alors évaluée côté serveur).
+      -->
 
       <div class="buttons">
          <button type="button" class="btn" onclick="appendToDisplay('1')">1</button>
@@ -30,6 +48,10 @@
 
          <button type="button" class="btn" onclick="appendToDisplay('0')">0</button>
          <button type="button" class="btn" onclick="clearDisplay()">C</button>
+         <!--
+            Le bouton "=" déclenche l'envoi de l'expression complète au serveur.
+            On ne recalcule rien côté client pour éviter d'avoir deux logiques de calcul.
+         -->
          <button type="submit" class="btn operator">=</button>
          <button type="button" class="btn operator" onclick="appendToDisplay('/')"></button>
       </div>
@@ -37,11 +59,21 @@
 </div>
 
 <script>
+   /**
+    * Ajoute un caractère à l'écran de la calculatrice.
+    *
+    * Ici, le navigateur affiche seulement ce que l'utilisateur tape. C'est le serveur qui fait le calcul.
+    */
    function appendToDisplay(value) {
       const display = document.getElementById('display');
       display.value += value;
    }
 
+   /**
+     * Réinitialise complètement l'afficheur.
+     *
+     * Utile pour permettre à l'utilisateur de repartir à zéro sans recharger la page.
+     */
    function clearDisplay() {
       document.getElementById('display').value = '';
    }
